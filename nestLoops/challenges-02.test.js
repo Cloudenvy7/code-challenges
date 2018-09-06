@@ -28,6 +28,18 @@ const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = (hours, stores) => {
   // Solution code here...
+// 1. need to take cookieStores and pull out the current hr from each store
+// 2. take that first item from each store and add them together.
+// 3. push that number to a new array called totalCookies.
+
+for(let i = 0; i < cookieStores.length; i++){
+  // console.log();
+  let newSum 
+  get cookiesStores[i][i] item within an item 
+  let newSum = cookiesStores[i][i] + newSum;
+  push newSum to grandTotalCookies array []
+  
+
 
 };
 
