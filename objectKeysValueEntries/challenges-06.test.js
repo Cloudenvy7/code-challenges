@@ -18,9 +18,10 @@ const getKeys = (obj) => {
 // // values from the object.
 // // ------------------------------------------------------------------------------------------------
 
-// const getValues = (obj) => {
-//   // Solution code here...
-// }
+const getValues = (obj) => {
+  return Object.values(obj);
+
+}
 
 // // ------------------------------------------------------------------------------------------------
 // // CHALLENGE 3
@@ -29,9 +30,9 @@ const getKeys = (obj) => {
 // // (key/value pairs) from the object.
 // // ------------------------------------------------------------------------------------------------
 
-// const getEntries = (obj) => {
-//   // Solution code here...
-// }
+const getEntries = (obj) => {
+  return Object.entries(obj);
+}
 
 // // ------------------------------------------------------------------------------------------------
 // // CHALLENGE 4
@@ -47,9 +48,15 @@ const getKeys = (obj) => {
 //   topics: ['SMACSS', 'APIs', 'NodeJS', 'SQL', 'jQuery', 'functional programming'],
 //   finalExam: true };
 
-// const getFrom = (obj, property) => {
-//   // Solution code here...
-// }
+const getFrom = (obj, property) => {
+  if(property === 'keys') {
+    return getKeys(obj);
+  } else if (property === 'value') {
+    return getValues(obj);
+  } else if (property === 'entries') {
+    return getEntries(obj);
+  }
+};
 
 // // ------------------------------------------------------------------------------------------------
 // // CHALLENGE 5
@@ -60,54 +67,58 @@ const getKeys = (obj) => {
 // // characters in the array. Use the getFrom function you wrote in challenge 4.
 // // ------------------------------------------------------------------------------------------------
 
-// let characters = [
-//   {
-//     name: 'Eddard',
-//     spouse: 'Catelyn',
-//     children: ['Robb', 'Sansa', 'Arya', 'Bran', 'Rickon'],
-//     house: 'Stark'
-//   },
-//   {
-//     name: 'Jon',
-//     spouse: 'Lysa',
-//     children: ['Robin'],
-//     house: 'Arryn'
-//   },
-//   {
-//     name: 'Cersei',
-//     spouse: 'Robert',
-//     children: ['Joffrey', 'Myrcella', 'Tommen'],
-//     house: 'Lannister'
-//   },
-//   {
-//     name: 'Daenarys',
-//     spouse: 'Khal Drogo',
-//     children: ['Drogon', 'Rhaegal', 'Viserion'],
-//     house: 'Targaryen'
-//   },
-//   {
-//     name: 'Mace',
-//     spouse: 'Alerie',
-//     children: ['Margaery', 'Loras'],
-//     house: 'Tyrell'
-//   },
-//   {
-//     name: 'Sansa',
-//     spouse: 'Tyrion',
-//     children: [],
-//     house: 'Stark'
-//   },
-//   {
-//     name: 'Jon',
-//     spouse: null,
-//     children: [],
-//     house: 'Snow'
-//   }
-// ]
+let characters = [
+  {
+    name: 'Eddard',
+    spouse: 'Catelyn',
+    children: ['Robb', 'Sansa', 'Arya', 'Bran', 'Rickon'],
+    house: 'Stark'
+  },
+  {
+    name: 'Jon',
+    spouse: 'Lysa',
+    children: ['Robin'],
+    house: 'Arryn'
+  },
+  {
+    name: 'Cersei',
+    spouse: 'Robert',
+    children: ['Joffrey', 'Myrcella', 'Tommen'],
+    house: 'Lannister'
+  },
+  {
+    name: 'Daenarys',
+    spouse: 'Khal Drogo',
+    children: ['Drogon', 'Rhaegal', 'Viserion'],
+    house: 'Targaryen'
+  },
+  {
+    name: 'Mace',
+    spouse: 'Alerie',
+    children: ['Margaery', 'Loras'],
+    house: 'Tyrell'
+  },
+  {
+    name: 'Sansa',
+    spouse: 'Tyrion',
+    children: [],
+    house: 'Stark'
+  },
+  {
+    name: 'Jon',
+    spouse: null,
+    children: [],
+    house: 'Snow'
+  }
+]
 
-// const totalCharacters = (arr) => {
-//   // Solution code here...
-// }
+const totalCharacters = (arr) => {
+  //the number of character objects within in the character array/object.
+  //forEach that goes over the full array. For each character object within the array, a new variable called NumberOfCharacters ++
+  getFrom(arr, name).map();
+  // this should pull in characters array, and then get the key value of name and enter it into an array, then after this new array is created the .length() get the length of the array in a number format. 
+
+};
 
 // // ------------------------------------------------------------------------------------------------
 // // CHALLENGE 6
@@ -115,7 +126,6 @@ const getKeys = (obj) => {
 // // Write a function named getHouses that returns an array of the houses in the data set.
 // // Use the getFrom function you wrote in challenge 4.
 // // ------------------------------------------------------------------------------------------------
-
 // const getHouses = (arr) => {
 //   // Solution code here...
 // }
