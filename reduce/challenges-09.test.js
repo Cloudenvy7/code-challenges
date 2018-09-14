@@ -8,12 +8,18 @@
 //
 // Note: You may not use the array's built-in length property.
 // ------------------------------------------------------------------------------------------------
+// [0, 1, 2, 3, 4].reduce(function(accumulator, currentValue, currentIndex, array) { return accumulator + currentValue; });
 
 const countNumberOfElements = (input) => {
-  // Solution code here...
+  let initialValue = 0;
+ return input.reduce(function (accumulator, currentValue) {
+    // console.log('CURRENT VALUE!!!!',currentValue);
+    // console.log(accumulator)
+    accumulator += 1;
+    return accumulator;
+  }, initialValue)
 };
-
-// ------------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------------------
 // CHALLENGE 2
 //
 // Write a function named countNumberOfChildren that, given the array of characters, below,
@@ -65,7 +71,20 @@ const characters = [
 ];
 
 const countNumberOfChildren = (input) => {
-  // Solution code here...
+  let numberOfChildern = []; 
+  let totalChildern = [];    
+  return input.reduce( (accumulator, currentValue) =>
+  {
+    console.log(currentValue.children);
+    // console.log(accumulator)
+    // console.log(currentValue.childern.length);
+    // console.log(numberChildern)
+    //NEED: a function that checks if any childern exist if they do push them to the numberOfChildern {}
+    numberOfChildern[currentValue.childern] = currentValue.childern;
+    
+    accumulator += 1;
+    return accumulator;
+  });
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -109,19 +128,28 @@ const snorlaxData = {
 };
 
 const extractStat = (statName, input) => {
-  // Solution code here...
-};
+  
+  let UrlofStat = '';
+  return input.reduce(function (accumulator,currentValue, statName)
+  {
+    console.log(statName);
+    //NEED: need a function that checks the input of url and if it is empty returyns null
+    return accumulator;
+  });
+} 
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 4
-//
 // Write a function that, given an array of numbers as input, uses ONE call to filter to
 // calculate the array's average value.
 // ------------------------------------------------------------------------------------------------
 
-const calculateAverage = (input) => {
-  // Solution code here...
-};
+// const calculateAverage = (input) => {
+//   input.reduce((accumulator, currentValue) => {
+  
+//   accumulator = ;
+// });  
+// };
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 5
