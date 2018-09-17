@@ -31,24 +31,18 @@ const grandTotal = (hours, stores) => {
 // 1. need  to take cookieStores and pull out the current hr from each store
 // 2. take that first item from each store and add them together.
 // 3. push that number to a new array called totalCookies.
+  let allStoresTotals = [];
 
-for(let i = 0; i < cookieStores.length; i++){
-  // console.log();
+  for(let i = 0; i < hours.length; i++){
+    let totalStorePerHour = 0;
   
-  hours = hoursOpen
-  stores = cookieStores
-  let newSum = 0;
-  
-  get cookiesStores[i][i] which is an item within an item 
-  let newSum = cookiesStores[i][i] + newSum;
-  
-  }outside of the array , push newSum to grandTotalCookies array []
-  
-
-
+    for( let j = 0; j < stores.length; j++){
+      totalStorePerHour += stores[j][i]; 
+    }
+    allStoresTotals.push(totalStorePerHour);
+  }
+  return allStoresTotals;
 };
-
-
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 2
@@ -62,8 +56,19 @@ for(let i = 0; i < cookieStores.length; i++){
 // ------------------------------------------------------------------------------------------------
 
 const salesData = (data) => {
-  // Solution code here...
-};
+  let objectDataArray = [];
+  let index = 0;
+  let hourlySales = grandTotal(hoursOpen, cookieStores);
+  hourlySales.forEach(element => {
+    let obj1 = {'time': hoursOpen[index], 'sales' : element + ' cookies',};
+    objectDataArray.push(obj1);
+    index += 1;    
+});
+return objectDataArray;
+console.log(hourlySales)
+}
+
+
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 3
@@ -78,7 +83,8 @@ const salesData = (data) => {
 // ------------------------------------------------------------------------------------------------
 
 const giveValentines = (list) => {
-  // Solution code here...
+  
+  
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -101,18 +107,18 @@ describe('Testing challenge 1', () => {
 describe('Testing challenge 2', () => {
   test('It should create an object of data for each store', () => {
     expect(salesData(grandTotal(hoursOpen, cookieStores))).toStrictEqual([
-      { sales: '88 cookies', time: '9 a.m.' },
-      { sales: '153 cookies', time: '10 a.m.' },
-      { sales: '252 cookies', time: '11 a.m.' },
-      { sales: '286 cookies', time: '12 a.m.' },
-      { sales: '139 cookies', time: '1 a.m.' },
-      { sales: '161 cookies', time: '2 a.m.' },
-      { sales: '145 cookies', time: '3 a.m.' },
-      { sales: '232 cookies', time: '4 a.m.' },
-      { sales: '276 cookies', time: '5 a.m.' },
-      { sales: '207 cookies', time: '6 a.m.' },
-      { sales: '161 cookies', time: '7 a.m.' },
-      { sales: '169 cookies', time: '8 a.m.' }
+      { sales: '88 cookies', time: '9 a.m.', },
+      { sales: '153 cookies', time: '10 a.m.', },
+      { sales: '252 cookies', time: '11 a.m.', },
+      { sales: '286 cookies', time: '12 a.m.', },
+      { sales: '139 cookies', time: '1 a.m.', },
+      { sales: '161 cookies', time: '2 a.m.', },
+      { sales: '145 cookies', time: '3 a.m.', },
+      { sales: '232 cookies', time: '4 a.m.', },
+      { sales: '276 cookies', time: '5 a.m.', },
+      { sales: '207 cookies', time: '6 a.m.', },
+      { sales: '161 cookies', time: '7 a.m.', },
+      { sales: '169 cookies', time: '8 a.m.', }
     ]);
 
     expect(salesData(grandTotal(hoursOpen, cookieStores)).length).toStrictEqual(hoursOpen.length);
