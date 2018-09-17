@@ -9,8 +9,10 @@
 // For example, oddValues([1,2,3]) returns [1,3].
 // ------------------------------------------------------------------------------------------------
 
-const oddValues = oddValues.filter( (input) => {
-  return !(input % 2);
+const oddValues =  (input) => {
+  let evens = numbers.filter(n,i) => {   
+  return !(n % 2);
+}
   // when it takes in integer exampleArray = [1,2,3]
   //exampleArray.filter(array, [i]);
   // takes the value of the array[i] and compares it to see if its an even number 
