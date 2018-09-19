@@ -35,9 +35,9 @@ const grandTotal = (hours, stores) => {
 
   for(let i = 0; i < hours.length; i++){
     let totalStorePerHour = 0;
-  
+
     for( let j = 0; j < stores.length; j++){
-      totalStorePerHour += stores[j][i]; 
+      totalStorePerHour += stores[j][i];
     }
     allStoresTotals.push(totalStorePerHour);
   }
@@ -62,11 +62,11 @@ const salesData = (data) => {
   hourlySales.forEach(element => {
     let obj1 = {'time': hoursOpen[index], 'sales' : element + ' cookies',};
     objectDataArray.push(obj1);
-    index += 1;    
-});
-return objectDataArray;
-console.log(hourlySales)
-}
+    index += 1;
+  });
+  return objectDataArray;
+  console.log(hourlySales);
+};
 
 
 
@@ -83,8 +83,25 @@ console.log(hourlySales)
 // ------------------------------------------------------------------------------------------------
 
 const giveValentines = (list) => {
-  
-  
+  // for each of the names in the array
+  // iterate through and have the {current name} + {current name + 1}
+  //push into a new array as a sting that says (current name gave current name + 1 a valentine)
+
+  let NewList = [];
+  for(let i = 0; i < list.length; i++ ){
+    let currentName = list[i];
+    console.log(currentName);
+
+    // for(let j = 1; j < list.length; j++){
+    if(currentName !== list[i]) {
+      
+    } else {
+      list.forEach((element)=> {
+        NewList.push(`${currentName} gives a Valentine to ${element}.`);});
+    };
+  };
+  // NewList.push((`${list[list.length - 1]} gives a Valentine to ${list[0]}`));
+  return NewList;
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -94,7 +111,7 @@ const giveValentines = (list) => {
 //
 // DO NOT CHANGE any of the below code.
 //
-// Run your tests from the console: jest challenges-02.test.js
+// Run your tests from the console: iest challenges-02.test.js
 //
 // ------------------------------------------------------------------------------------------------
 
