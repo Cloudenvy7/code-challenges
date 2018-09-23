@@ -95,13 +95,28 @@ const speaker = (message, callback) => {
 //
 // Return the modified array.
 // ------------------------------------------------------------------------------------------------
+let NewArray = [];
 
 const addValues = (arr, value) => {
-  // Solution code here...
-};
+  arr.forEach((element)=> {
+    NewArray.push(value);
+    console.log('hey listein forEach');
 
-const addNumbers = (num, arr, times, callback) => {
-  // Solution code here...
+    // console.log(value);
+    // console.log(NewArray);
+    return NewArray;
+  });
+
+  const addNumbers = (num, arr, times, callback) => {
+    // for(let i = 0; i < times; i++){
+    //   arr.push(num);
+    console.log(arr);
+  };
+  //   console.log('hey listien mee');
+  //   return addValues(arr,value);
+  // };
+  console.log('hey listien to at the end');
+
 };
 
 // ------------------------------------------------------------------------------------------------
