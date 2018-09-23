@@ -104,6 +104,8 @@ const giveValentines = (list) => {
   return NewList;
 };
 
+//almost got this done, saw the answer in the two-dimension array challenge
+
 // ------------------------------------------------------------------------------------------------
 // TESTS
 //
