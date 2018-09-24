@@ -15,11 +15,13 @@
 // ------------------------------------------------------------------------------------------------
 
 const howMuchPencil = (name) => {
-  let result = [];
-  // Solution code here...
-  return result;
+  let anwer = [];
+  for (let i = 0; i < name.length + 1; i++) {
+    answer.push(name.slice(i));
+  }
+  return answer;
 };
-
+/// not sure reading the let answer
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 2
 //
