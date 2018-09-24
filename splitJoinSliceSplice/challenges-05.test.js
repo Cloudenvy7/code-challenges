@@ -46,7 +46,11 @@ const wordsToCharList = (input) => {
 
 const totalSumCSV = (input) => {
   let total = 0; {
-    
+    let numbers = input.split(',');
+    numbers.forEach(input => {
+      total = total + parseFloat(input);
+    });
+
   }
   // Solution code here...
   return total;
