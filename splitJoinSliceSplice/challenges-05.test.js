@@ -15,13 +15,14 @@
 // ------------------------------------------------------------------------------------------------
 
 const howMuchPencil = (name) => {
-  let anwer = [];
+  let answer = [];
   for (let i = 0; i < name.length + 1; i++) {
     answer.push(name.slice(i));
   }
   return answer;
 };
 /// not sure reading the let answer
+// was spelling answer wrong
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 2
 //
@@ -32,7 +33,8 @@ const howMuchPencil = (name) => {
 // ------------------------------------------------------------------------------------------------
 
 const wordsToCharList = (input) => {
-  // Solution code here...
+  return input.split('');
+
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -43,7 +45,9 @@ const wordsToCharList = (input) => {
 // ------------------------------------------------------------------------------------------------
 
 const totalSumCSV = (input) => {
-  let total = 0;
+  let total = 0; {
+    
+  }
   // Solution code here...
   return total;
 };
